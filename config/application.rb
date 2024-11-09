@@ -7,5 +7,7 @@ module SampleApp
   class Application < Rails::Application
     config.load_defaults 6.0
     config.active_storage.variant_processor = :mini_magick
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
